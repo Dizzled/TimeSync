@@ -12,9 +12,10 @@
 
 using namespace std;
 
-int main()
+int main(int argc, char* argv[])
 {
- 
+
+	
   float output = 0;
   Estimate systemTime;
   string dataFileName;
@@ -22,12 +23,18 @@ int main()
   vector<pair<string, vector<float>>> dataOutput;
   vector<pair<string, vector<float>>> dataInput;
 
+  if (argc == 2) {
+	  dataFileName = argv[1];
+  }
+  
+
   cout << "Enter Data Time Data File: " << endl;
   getline(cin, dataFileName);
   
   fstream dataFile;
   dataFile.open(dataFileName, ios::in);
   // Create an input filestream
+
   if (!dataFile.is_open()) throw runtime_error("Could not open datafile");
   
   //Open Read then Close File

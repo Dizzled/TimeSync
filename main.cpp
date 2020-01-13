@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
   }
   
 
-  cout << "Enter Data Time Data File: " << endl;
+  cout << "Enter Data Time File: " << endl;
   getline(cin, dataFileName);
   
   fstream dataFile;
